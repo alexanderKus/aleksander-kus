@@ -1,20 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aleksander Kus</title>
     <style>
-        body {
-            font-family: monospace;
+      body {
+        font-family: monospace;
+        font-size: 2.5rem;
+        background-color: #2e2e2e;
+        color: wheat;
+        margin: 0;
+      }
+      p {
+        margin: 10px;
+      }
+      a {
+        color: orange;
+      }
+      a:visited {
+        text-decoration: none;
+        color: orange;
+      }
+      .content {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        opacity: 0;
+        animation: css-flex 3s ease forwards;
+      }
+      .empty {
+        flex-basis: 50%;
+      }
+      @keyframes css-flex {
+        0% {
+          opacity: 0;
+          transform: translateY(-40px);
         }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
     </style>
-</head>
-<body>
-    <center>
-        <p>Hi! I am Aleksander Kuś</p>
-        <p>You can checkout my <a href="https://github.com/alexanderkus"></a>github</a>.</p>
+  </head>
+  <body>
+    <main>
+      <!-- If you see this. Just hire me. :D -->
+      <div class="content">
+        <p>Hi! I am Aleksander Kuś.</p>
+        <p>
+          You can checkout my
+          <a href="https://github.com/alexanderkus">github</a>.
+        </p>
         <p>I also have a <a href="https://alexanderkus.github.io">blog</a>.</p>
-    </center>
-</body>
+        <p class="empty"></p>
+      </div>
+    </main>
+  </body>
 </html>
